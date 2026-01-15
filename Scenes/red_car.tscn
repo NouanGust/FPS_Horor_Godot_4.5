@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0pesldpa38ws"]
+
+[ext_resource type="PackedScene" uid="uid://hncthqwfjrpy" path="res://Assets/GBL/Cars/fiat_126_psx_style_-_free_download.glb" id="1_mc5mp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gwli8"]
+size = Vector3(2.9066772, 2.8450317, 6.2024994)
+
+[node name="Red_car" type="StaticBody3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_mc5mp")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.055267334, 1.3722229, 0.035972595)
+shape = SubResource("BoxShape3D_gwli8")

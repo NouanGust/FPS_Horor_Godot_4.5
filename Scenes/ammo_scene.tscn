@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxnhwakptijv2"]
+
+[ext_resource type="ArrayMesh" uid="uid://b71fsihavmtuv" path="res://Assets/Models/Pistol_ammo.res" id="1_l5ry8"]
+
+[node name="Ammo_scene" type="Node3D"]
+
+[node name="PistolAmmo" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.076604486, 0, 0.084695816)
+mesh = ExtResource("1_l5ry8")

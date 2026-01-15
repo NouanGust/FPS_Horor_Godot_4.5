@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmrwkt4xu0xgn"]
+
+[ext_resource type="ArrayMesh" uid="uid://cfx37cck24te2" path="res://Assets/Models/Cop_npc.res" id="1_jtx8p"]
+
+[node name="CopNpc" type="MeshInstance3D"]
+mesh = ExtResource("1_jtx8p")

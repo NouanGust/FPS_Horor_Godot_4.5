@@ -1,0 +1,144 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dxb248gpctkpt"
+path="res://.godot/imported/low_poly_stylized_gemstones.glb-41182d5faf7c6ab2fb929ff92049f1ab.scn"
+
+[deps]
+
+source_file="res://Assets/GBL/Gemstones/low_poly_stylized_gemstones.glb"
+dest_files=["res://.godot/imported/low_poly_stylized_gemstones.glb-41182d5faf7c6ab2fb929ff92049f1ab.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"meshes": {
+"Sketchfab_Scene_Object_0": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Round_purple_gem.res",
+"save_to_file/path": "uid://dg6cdcwt1sv4r"
+},
+"Sketchfab_Scene_Object_1": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Round_yellow_gem.res",
+"save_to_file/path": "uid://81i37g15vi83"
+},
+"Sketchfab_Scene_Object_10": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Square_purple_gem.res",
+"save_to_file/path": "uid://kx1jbs2s6v57"
+},
+"Sketchfab_Scene_Object_2": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Round_green_gem.res",
+"save_to_file/path": "uid://0ukc3a4rabti"
+},
+"Sketchfab_Scene_Object_3": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Round_blue_gem.res",
+"save_to_file/path": "uid://3yg0aew1c0fd"
+},
+"Sketchfab_Scene_Object_4": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Round_red_gem.res",
+"save_to_file/path": "uid://c8uibp08lrtnn"
+},
+"Sketchfab_Scene_Object_5": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Pointing_purple_gem.res",
+"save_to_file/path": "uid://cvbxyackeylpi"
+},
+"Sketchfab_Scene_Object_6": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Pointing_yellow_gem.res",
+"save_to_file/path": "uid://drojrgp76f3sy"
+},
+"Sketchfab_Scene_Object_7": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Pointing_green_gem.res",
+"save_to_file/path": "uid://bffd77xnv5vgi"
+},
+"Sketchfab_Scene_Object_8": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Pointing_blue_gem.res",
+"save_to_file/path": "uid://b3d8470smy052"
+},
+"Sketchfab_Scene_Object_9": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://Assets/Models/Pointing_red_gem.res",
+"save_to_file/path": "uid://d2gm1l5sqbh52"
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

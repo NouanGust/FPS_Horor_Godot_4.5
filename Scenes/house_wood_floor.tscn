@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://356201shp38i"]
+
+[ext_resource type="ArrayMesh" uid="uid://drqc7k1imtl6q" path="res://Assets/Models/Wood_floor.res" id="1_at4cu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4gfvj"]
+points = PackedVector3Array(0.02, 0.01, -9.7905286e-08, 0.02, 0.01, -0.001, 0, 0.01, -9.7905286e-08, 0.02, -0.01, -9.7905286e-08, 0.02, -0.01, -0.001, 0, 0.01, -0.001, 0, -0.01, -9.7905286e-08, 0, -0.01, -0.001)
+
+[node name="House_wood_floor" type="Node3D"]
+
+[node name="WoodFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = ExtResource("1_at4cu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WoodFloor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WoodFloor/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_4gfvj")

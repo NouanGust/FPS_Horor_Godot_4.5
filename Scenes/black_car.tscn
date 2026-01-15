@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv3bmdugjtn1i"]
+
+[ext_resource type="PackedScene" uid="uid://da5lkqfi6a4d2" path="res://Assets/GBL/Cars/psx_-_black_car_free_download.glb" id="1_oyams"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dwxjo"]
+size = Vector3(3.353531, 2.8959885, 8.052326)
+
+[node name="Black_car" type="StaticBody3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_oyams")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03452301, 1.3609886, -0.19269371)
+shape = SubResource("BoxShape3D_dwxjo")
+
+[editable path="Sketchfab_Scene"]

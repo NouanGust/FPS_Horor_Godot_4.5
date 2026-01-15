@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://pqkuicimr81f"]
+
+[ext_resource type="PackedScene" uid="uid://brg1hcj7clovx" path="res://Assets/GBL/psx_old_metal_shelf.glb" id="1_ndc05"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pp4lf"]
+size = Vector3(3.0844727, 2.3609314, 1.0732422)
+
+[node name="Shelf" type="StaticBody3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_ndc05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17044091, 1.1920929e-07, 0.381392)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15112305, 1.1398773, 0.38623047)
+shape = SubResource("BoxShape3D_pp4lf")
+
+[editable path="Sketchfab_Scene"]

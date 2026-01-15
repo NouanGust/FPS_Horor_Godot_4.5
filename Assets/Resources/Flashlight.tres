@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c7g020g2trw4g"]
+
+[ext_resource type="Texture2D" uid="uid://45kuf5cycsuu" path="res://textures/Flashlight_invetory.png" id="1_3w1wx"]
+[ext_resource type="Script" uid="uid://dmt8jjeb4pyeu" path="res://Scripts/item_data.gd" id="1_a8yvo"]
+[ext_resource type="PackedScene" uid="uid://7s7cjwv5wjkm" path="res://Scenes/flashlight.tscn" id="2_fx1kg"]
+
+[resource]
+script = ExtResource("1_a8yvo")
+name = "Flashlight"
+description = "Uma lanterna confiável."
+icon = ExtResource("1_3w1wx")
+model_scene = ExtResource("2_fx1kg")
+metadata/_custom_type_script = "uid://dmt8jjeb4pyeu"

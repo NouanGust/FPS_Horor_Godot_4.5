@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://73kj1gms0wvn"]
+
+[ext_resource type="Texture2D" uid="uid://de08xpcn8dcld" path="res://textures/Pistol_inventory.png" id="1_8xs02"]
+[ext_resource type="Script" uid="uid://dmt8jjeb4pyeu" path="res://Scripts/item_data.gd" id="1_v4l7v"]
+[ext_resource type="PackedScene" uid="uid://co8vphn5qdln" path="res://Scenes/pistol.tscn" id="2_q440d"]
+
+[resource]
+script = ExtResource("1_v4l7v")
+name = "Pistola "
+description = "Arma de curta distância."
+is_weapon = true
+icon = ExtResource("1_8xs02")
+model_scene = ExtResource("2_q440d")
+damage = 10
+metadata/_custom_type_script = "uid://dmt8jjeb4pyeu"

@@ -1,0 +1,451 @@
+[gd_scene load_steps=15 format=3 uid="uid://b0igtlbr05550"]
+
+[ext_resource type="Script" uid="uid://5a2d66x4uri8" path="res://Scripts/Player/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://dmt8jjeb4pyeu" path="res://Scripts/item_data.gd" id="2_fkybt"]
+[ext_resource type="Script" uid="uid://b32h44ymcb44c" path="res://Scripts/dialog_box.gd" id="3_6t5aa"]
+[ext_resource type="Script" uid="uid://b5004y71movku" path="res://Scripts/watch_system.gd" id="3_vgqql"]
+[ext_resource type="Resource" uid="uid://c7g020g2trw4g" path="res://Assets/Resources/Flashlight.tres" id="3_x3wgy"]
+[ext_resource type="Resource" uid="uid://73kj1gms0wvn" path="res://Assets/Resources/Pistol.tres" id="4_x3wgy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v0iea"]
+
+[sub_resource type="Animation" id="Animation_x3wgy"]
+resource_name = "Look_Watch"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1.902227, -0.050284848, -0.31703785, 0, 0, 1.902227, -0.016635861, 0, 0, 0, 1.0538609, -0.033271722, 0.14139436, 0, 0),
+"times": PackedFloat32Array(0, 0.3017091, 0.40152425, 0.60115457)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.7899797, -0.050284848, -0.13166328, 0, 0, 0.8594434, -0.016635861, -0.011577289, 0, 0, -2.4450529, -0.033271722, 0.5507494, 0, 0),
+"times": PackedFloat32Array(0, 0.3017091, 0.40152425, 0.60115457)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.050284848, 0, 0, 0, -0.1851528, -0.016635861, 0.030858804, 0, 0, 0.027626365, -0.033271722, -0.0354632, 0, 0),
+"times": PackedFloat32Array(0, 0.3017091, 0.40152425, 0.60115457)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.050284848, 0, 0, 0, 0, -0.016635861, 0, 0, 0, 0.68602157, -0.033271722, -0.11433694, 0, 0),
+"times": PackedFloat32Array(0, 0.3017091, 0.40152425, 0.60115457)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.050284848, 0, 0, 0, 0, -0.016635861, 0, 0, 0, -1.5811344, -0.033271722, 0.26352242, 0, 0),
+"times": PackedFloat32Array(0, 0.3017091, 0.40152425, 0.60115457)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.050284848, 0, 0, 0, 0, -0.016635861, 0, 0, 0, -1.8909812, -0.033271722, 0.31516355, 0, 0),
+"times": PackedFloat32Array(0, 0.3017091, 0.40152425, 0.60115457)
+}
+
+[sub_resource type="Animation" id="Animation_fkybt"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3smsa"]
+_data = {
+&"Look_Watch": SubResource("Animation_x3wgy"),
+&"RESET": SubResource("Animation_fkybt")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_x3wgy"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_3smsa"]
+font_size = 28
+
+[sub_resource type="BoxMesh" id="BoxMesh_x3wgy"]
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_v0iea")
+inventory = Array[ExtResource("2_fkybt")]([ExtResource("3_x3wgy"), ExtResource("4_x3wgy")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_f60y1")
+debug_color = Color(0.5358432, 0.4117328, 1, 1)
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62157714, 0)
+
+[node name="HandHolder" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54113996, -0.48633468, -0.66729426)
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -5)
+
+[node name="WatchPivo" type="Node3D" parent="Head/Camera3D"]
+process_mode = 3
+script = ExtResource("3_vgqql")
+
+[node name="LeftArm" type="MeshInstance3D" parent="Head/Camera3D/WatchPivo"]
+transform = Transform3D(0.14604332, 0, 0.00041890872, 0, 0.10153828, 0, -6.117076e-05, 0, 0.9999997, -2.3722978, -1.1860416, -0.42573345)
+mesh = SubResource("BoxMesh_v0iea")
+skeleton = NodePath("../../HandHolder")
+
+[node name="Time_label" type="Label3D" parent="Head/Camera3D/WatchPivo/LeftArm"]
+transform = Transform3D(-9.371433e-09, -1.0026352, -4.3711378e-08, 0, -4.382658e-08, 0.9999998, -0.21459036, 4.3815817e-08, 1.910581e-15, -0.14322853, 0.65315676, -0.20476839)
+no_depth_test = true
+text = "05:00"
+font_size = 48
+
+[node name="Items_label" type="Label3D" parent="Head/Camera3D/WatchPivo/LeftArm"]
+transform = Transform3D(-9.371433e-09, -1.0026348, -4.3711367e-08, 0, -4.3826578e-08, 0.9999998, -0.2145903, 4.3823093e-08, 1.910581e-15, 0.06336212, 0.65315676, -0.20689812)
+no_depth_test = true
+text = "0/10"
+font_size = 22
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3D/WatchPivo"]
+libraries = {
+&"": SubResource("AnimationLibrary_3smsa")
+}
+
+[node name="Inventory_layer" type="CanvasLayer" parent="Head/Camera3D/WatchPivo"]
+
+[node name="ColorRect" type="ColorRect" parent="Head/Camera3D/WatchPivo/Inventory_layer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1254902, 0.1254902, 0.1254902, 0.53333336)
+
+[node name="Panel" type="PanelContainer" parent="Head/Camera3D/WatchPivo/Inventory_layer/ColorRect"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -421.0
+offset_top = 95.0
+offset_right = -35.0
+offset_bottom = -244.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Head/Camera3D/WatchPivo/Inventory_layer/ColorRect/Panel"]
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="Itens_label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 143.0
+offset_top = -23.0
+offset_right = 348.0
+offset_bottom = 31.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "0/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer_label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -362.0
+offset_top = 4.0
+offset_right = 348.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "05:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverScreen" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5176471)
+
+[node name="Result_label" type="Label" parent="CanvasLayer/GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -311.0
+offset_top = -89.5
+offset_right = 311.0
+offset_bottom = 89.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "GAME-OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart_btn" type="Button" parent="CanvasLayer/GameOverScreen"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.0
+offset_top = -350.0
+offset_right = 110.0
+offset_bottom = -275.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "RESTART"
+
+[node name="DialogBox" type="PanelContainer" parent="CanvasLayer" groups=["ui_dialogue"]]
+self_modulate = Color(0.008578247, 0.10088115, 0.99999994, 1)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 94.0
+offset_top = -243.0
+offset_right = -72.0
+offset_bottom = -81.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("3_6t5aa")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogBox"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogBox/MarginContainer"]
+layout_mode = 2
+
+[node name="Name_label" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Nome
+"
+
+[node name="Text_label" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Texto
+"
+
+[node name="AmmoDisplay" type="Label" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -93.0
+offset_right = -78.0
+offset_bottom = -70.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "10"
+label_settings = SubResource("LabelSettings_x3wgy")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.528
+anchor_right = 0.5
+anchor_bottom = 0.528
+offset_left = -65.0
+offset_top = -9.880005
+offset_right = 65.0
+offset_bottom = 13.119995
+grow_horizontal = 2
+grow_vertical = 2
+text = "[E] para interagir"
+label_settings = SubResource("LabelSettings_3smsa")
+
+[node name="Arms" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.029618263, 0.17326498)
+
+[node name="left_arm" type="MeshInstance3D" parent="Arms"]
+transform = Transform3D(0.14999999, 0, 0, 0, 0.06602848, 0.5387428, 0, -0.1346857, 0.26411393, 0.7256004, -0.1729086, -0.2880315)
+mesh = SubResource("BoxMesh_x3wgy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Arms/left_arm"]
+transform = Transform3D(0.9999997, 0, 0, 0, 0.4999998, -3.4641006, 0, 0.21650629, 0.4999998, 0, 1.4912126, -0.6378125)
+mesh = SubResource("BoxMesh_x3wgy")
+skeleton = NodePath("../..")
+
+[node name="right_arm" type="MeshInstance3D" parent="Arms"]
+transform = Transform3D(0.14999999, 0, 0, 0, 0.06602848, 0.5387428, 0, -0.1346857, 0.26411393, -0.53868484, -0.18770841, -0.2880315)
+mesh = SubResource("BoxMesh_x3wgy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Arms/right_arm"]
+transform = Transform3D(0.9999997, 0, 0, 0, 0.4999998, -3.4641006, 0, 0.21650629, 0.4999998, 0, 1.4912126, -0.6378125)
+mesh = SubResource("BoxMesh_x3wgy")
+skeleton = NodePath("../..")

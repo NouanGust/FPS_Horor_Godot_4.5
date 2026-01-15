@@ -1,0 +1,73 @@
+[gd_scene load_steps=13 format=3 uid="uid://c7yspe6ktbbl6"]
+
+[ext_resource type="Script" uid="uid://c8qlfppgus7p3" path="res://Scripts/colectable_gem.gd" id="1_73aq2"]
+[ext_resource type="ArrayMesh" uid="uid://bffd77xnv5vgi" path="res://Assets/Models/Pointing_green_gem.res" id="2_5dsqb"]
+[ext_resource type="ArrayMesh" uid="uid://b3d8470smy052" path="res://Assets/Models/Pointing_blue_gem.res" id="3_c3oli"]
+[ext_resource type="ArrayMesh" uid="uid://d2gm1l5sqbh52" path="res://Assets/Models/Pointing_red_gem.res" id="4_cfui5"]
+[ext_resource type="ArrayMesh" uid="uid://drojrgp76f3sy" path="res://Assets/Models/Pointing_yellow_gem.res" id="5_hahrc"]
+[ext_resource type="ArrayMesh" uid="uid://3yg0aew1c0fd" path="res://Assets/Models/Round_blue_gem.res" id="6_evvn7"]
+[ext_resource type="ArrayMesh" uid="uid://0ukc3a4rabti" path="res://Assets/Models/Round_green_gem.res" id="7_upskh"]
+[ext_resource type="ArrayMesh" uid="uid://dg6cdcwt1sv4r" path="res://Assets/Models/Round_purple_gem.res" id="8_3llwy"]
+[ext_resource type="ArrayMesh" uid="uid://c8uibp08lrtnn" path="res://Assets/Models/Round_red_gem.res" id="9_pptuy"]
+[ext_resource type="ArrayMesh" uid="uid://81i37g15vi83" path="res://Assets/Models/Round_yellow_gem.res" id="10_mpt3h"]
+[ext_resource type="ArrayMesh" uid="uid://kx1jbs2s6v57" path="res://Assets/Models/Square_purple_gem.res" id="11_xvk15"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_10otm"]
+
+[node name="Colectable_gem" type="StaticBody3D" groups=["interactable"]]
+script = ExtResource("1_73aq2")
+interaction_text = "Joia"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_10otm")
+
+[node name="Modelos" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="PointingGreenGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 0.4492098, -0.8934263, 0, 0.8934263, 0.4492098, -0.03590697, 0, -0.13531435)
+mesh = ExtResource("2_5dsqb")
+skeleton = NodePath("../..")
+
+[node name="PointingBlueGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 0.44635394, -0.8948565, 0, 0.8948565, 0.44635394, 0.0014979243, 0.017183457, -0.09640343)
+mesh = ExtResource("3_c3oli")
+skeleton = NodePath("../..")
+
+[node name="PointingRedGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 0.44635394, -0.8948565, 0, 0.8948565, 0.44635394, -0.012195945, 0.031130813, -0.10336036)
+mesh = ExtResource("4_cfui5")
+
+[node name="PointingYellowGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 0.44635394, -0.8948565, 0, 0.8948565, 0.44635394, 0.01614523, -0.04831427, -0.063733205)
+mesh = ExtResource("5_hahrc")
+
+[node name="RoundBlueGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023250043, 0, 0.030041695)
+mesh = ExtResource("6_evvn7")
+
+[node name="RoundGreenGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012017012, -5.9604645e-08, 0.006182432)
+mesh = ExtResource("7_upskh")
+
+[node name="RoundPurpleGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04031992, 0, 0.056428254)
+mesh = ExtResource("8_3llwy")
+
+[node name="RoundRedGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05781716, 0, 0.062505424)
+mesh = ExtResource("9_pptuy")
+
+[node name="RoundYellowGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026912093, 0, 0.04581368)
+mesh = ExtResource("10_mpt3h")
+
+[node name="SquarePurpleGem" type="MeshInstance3D" parent="Modelos"]
+transform = Transform3D(1, 0, 0, 0, 0.6375047, -0.7704465, 0, 0.7704465, 0.6375047, 0.06116104, 0, 0.0862124)
+mesh = ExtResource("11_xvk15")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6559351, 0)
+light_color = Color(0.6, 0.49411765, 1, 1)
+light_energy = 0.9
+omni_range = 1.5

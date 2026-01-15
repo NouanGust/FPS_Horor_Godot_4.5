@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0sdnrvbelj2q"]
+
+[ext_resource type="PackedScene" uid="uid://bg7vn38htepro" path="res://Assets/GBL/ps1_style_morgue_medical_cabinet.glb" id="1_7a4v6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_imhc6"]
+size = Vector3(1.111206, 2.068695, 0.58935547)
+
+[node name="Cabinet" type="StaticBody3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_7a4v6")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012390137, 1.0484161, -0.009033203)
+shape = SubResource("BoxShape3D_imhc6")
+
+[editable path="Sketchfab_Scene"]

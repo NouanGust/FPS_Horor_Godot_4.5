@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dffjn25uk07u2"]
+
+[ext_resource type="Texture2D" uid="uid://bi7gmi4jwl84h" path="res://textures/Pistol_ammo_inventory.png" id="1_u11e6"]
+[ext_resource type="Script" uid="uid://dmt8jjeb4pyeu" path="res://Scripts/item_data.gd" id="1_wjuhn"]
+[ext_resource type="PackedScene" uid="uid://dxnhwakptijv2" path="res://Scenes/ammo_scene.tscn" id="2_u11e6"]
+
+[resource]
+script = ExtResource("1_wjuhn")
+type = 1
+name = "ammo"
+icon = ExtResource("1_u11e6")
+model_scene = ExtResource("2_u11e6")
+metadata/_custom_type_script = "uid://dmt8jjeb4pyeu"
