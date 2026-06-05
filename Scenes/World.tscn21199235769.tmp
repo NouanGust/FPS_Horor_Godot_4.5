@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c2bitig2wihct" path="res://Scripts/world.gd" id="1_kn06e"]
 [ext_resource type="ArrayMesh" uid="uid://b86kq023mr76" path="res://Assets/Models/Road.res" id="3_gjpho"]
 [ext_resource type="Script" uid="uid://bflrtwvra7pog" path="res://Scripts/shader_config.gd" id="3_rwt1y"]
-[ext_resource type="Material" uid="uid://bq4uy7wo5i0bl" path="res://new_shader_material.tres" id="4_mvfa8"]
+[ext_resource type="Shader" uid="uid://bcdfkqxqxy4t3" path="res://Shadders/overlay.gdshader" id="4_mvfa8"]
 [ext_resource type="ArrayMesh" uid="uid://buqr0qfogjkvv" path="res://Assets/Models/Road_turn1.res" id="4_p70al"]
 [ext_resource type="ArrayMesh" uid="uid://bjvtcn0e7uloo" path="res://Assets/Models/Asphalt.res" id="5_p70al"]
 [ext_resource type="ArrayMesh" uid="uid://cmp0vbjgbowug" path="res://Assets/Models/Building_12.res" id="7_uo7di"]
@@ -28,6 +28,7 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_5cjrv")
 
 [sub_resource type="Environment" id="Environment_5nsto"]
+background_mode = 1
 sky = SubResource("Sky_j0p05")
 tonemap_mode = 2
 glow_enabled = true

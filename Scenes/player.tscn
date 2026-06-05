@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0igtlbr05550"]
+[gd_scene format=3 uid="uid://b0igtlbr05550"]
 
 [ext_resource type="Script" uid="uid://5a2d66x4uri8" path="res://Scripts/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://dmt8jjeb4pyeu" path="res://Scripts/item_data.gd" id="2_fkybt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://b5004y71movku" path="res://Scripts/watch_system.gd" id="3_vgqql"]
 [ext_resource type="Resource" uid="uid://c7g020g2trw4g" path="res://Assets/Resources/Flashlight.tres" id="3_x3wgy"]
 [ext_resource type="Resource" uid="uid://73kj1gms0wvn" path="res://Assets/Resources/Pistol.tres" id="4_x3wgy"]
+[ext_resource type="Material" uid="uid://bq4uy7wo5i0bl" path="res://new_shader_material.tres" id="6_3smsa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
 
@@ -191,62 +192,63 @@ _data = {
 &"RESET": SubResource("Animation_fkybt")
 }
 
+[sub_resource type="QuadMesh" id="QuadMesh_3smsa"]
+material = ExtResource("6_3smsa")
+flip_faces = true
+size = Vector2(2, 2)
+
 [sub_resource type="LabelSettings" id="LabelSettings_x3wgy"]
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_3smsa"]
 font_size = 28
 
-[sub_resource type="BoxMesh" id="BoxMesh_x3wgy"]
-
-[node name="Player" type="CharacterBody3D" groups=["player"]]
+[node name="Player" type="CharacterBody3D" unique_id=439148353 groups=["player"]]
 script = ExtResource("1_v0iea")
 inventory = Array[ExtResource("2_fkybt")]([ExtResource("3_x3wgy"), ExtResource("4_x3wgy")])
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1348749623]
 shape = SubResource("CapsuleShape3D_f60y1")
 debug_color = Color(0.5358432, 0.4117328, 1, 1)
 
-[node name="Head" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="." unique_id=1097421805]
 
-[node name="Camera3D" type="Camera3D" parent="Head"]
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=187206970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62157714, 0)
 
-[node name="HandHolder" type="Node3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54113996, -0.48633468, -0.66729426)
+[node name="HandHolder" type="Node3D" parent="Head/Camera3D" unique_id=1051392146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43044508, -0.44069475, -0.26006365)
 
-[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=139666623]
 target_position = Vector3(0, 0, -5)
 
-[node name="WatchPivo" type="Node3D" parent="Head/Camera3D"]
+[node name="WatchPivo" type="Node3D" parent="Head/Camera3D" unique_id=1700671398]
 process_mode = 3
 script = ExtResource("3_vgqql")
 
-[node name="LeftArm" type="MeshInstance3D" parent="Head/Camera3D/WatchPivo"]
+[node name="LeftArm" type="MeshInstance3D" parent="Head/Camera3D/WatchPivo" unique_id=216789817]
 transform = Transform3D(0.14604332, 0, 0.00041890872, 0, 0.10153828, 0, -6.117076e-05, 0, 0.9999997, -2.3722978, -1.1860416, -0.42573345)
 mesh = SubResource("BoxMesh_v0iea")
 skeleton = NodePath("../../HandHolder")
 
-[node name="Time_label" type="Label3D" parent="Head/Camera3D/WatchPivo/LeftArm"]
+[node name="Time_label" type="Label3D" parent="Head/Camera3D/WatchPivo/LeftArm" unique_id=1487607962]
 transform = Transform3D(-9.371433e-09, -1.0026352, -4.3711378e-08, 0, -4.382658e-08, 0.9999998, -0.21459036, 4.3815817e-08, 1.910581e-15, -0.14322853, 0.65315676, -0.20476839)
 no_depth_test = true
 text = "05:00"
 font_size = 48
 
-[node name="Items_label" type="Label3D" parent="Head/Camera3D/WatchPivo/LeftArm"]
+[node name="Items_label" type="Label3D" parent="Head/Camera3D/WatchPivo/LeftArm" unique_id=1243532982]
 transform = Transform3D(-9.371433e-09, -1.0026348, -4.3711367e-08, 0, -4.3826578e-08, 0.9999998, -0.2145903, 4.3823093e-08, 1.910581e-15, 0.06336212, 0.65315676, -0.20689812)
 no_depth_test = true
 text = "0/10"
 font_size = 22
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3D/WatchPivo"]
-libraries = {
-&"": SubResource("AnimationLibrary_3smsa")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3D/WatchPivo" unique_id=1154678068]
+libraries/ = SubResource("AnimationLibrary_3smsa")
 
-[node name="Inventory_layer" type="CanvasLayer" parent="Head/Camera3D/WatchPivo"]
+[node name="Inventory_layer" type="CanvasLayer" parent="Head/Camera3D/WatchPivo" unique_id=304516711]
 
-[node name="ColorRect" type="ColorRect" parent="Head/Camera3D/WatchPivo/Inventory_layer"]
+[node name="ColorRect" type="ColorRect" parent="Head/Camera3D/WatchPivo/Inventory_layer" unique_id=1868175489]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -254,7 +256,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1254902, 0.1254902, 0.1254902, 0.53333336)
 
-[node name="Panel" type="PanelContainer" parent="Head/Camera3D/WatchPivo/Inventory_layer/ColorRect"]
+[node name="Panel" type="PanelContainer" parent="Head/Camera3D/WatchPivo/Inventory_layer/ColorRect" unique_id=1345658113]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -267,12 +269,17 @@ offset_bottom = -244.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="Head/Camera3D/WatchPivo/Inventory_layer/ColorRect/Panel"]
+[node name="GridContainer" type="GridContainer" parent="Head/Camera3D/WatchPivo/Inventory_layer/ColorRect/Panel" unique_id=1455750402]
 layout_mode = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D" unique_id=221865343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6231133)
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_3smsa")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2114512841]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1976679621]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -286,14 +293,14 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Panel" type="Panel" parent="CanvasLayer"]
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1271498644]
 visible = false
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 94.0
 grow_horizontal = 2
 
-[node name="Itens_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="Itens_label" type="Label" parent="CanvasLayer/Panel" unique_id=1467262205]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -308,7 +315,7 @@ text = "0/10"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer_label" type="Label" parent="CanvasLayer/Panel"]
+[node name="Timer_label" type="Label" parent="CanvasLayer/Panel" unique_id=1774412069]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -323,7 +330,7 @@ text = "05:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GameOverScreen" type="ColorRect" parent="CanvasLayer"]
+[node name="GameOverScreen" type="ColorRect" parent="CanvasLayer" unique_id=298751447]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -332,7 +339,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5176471)
 
-[node name="Result_label" type="Label" parent="CanvasLayer/GameOverScreen"]
+[node name="Result_label" type="Label" parent="CanvasLayer/GameOverScreen" unique_id=1279540420]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -350,7 +357,7 @@ text = "GAME-OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Restart_btn" type="Button" parent="CanvasLayer/GameOverScreen"]
+[node name="Restart_btn" type="Button" parent="CanvasLayer/GameOverScreen" unique_id=1512058089]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -366,7 +373,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 48
 text = "RESTART"
 
-[node name="DialogBox" type="PanelContainer" parent="CanvasLayer" groups=["ui_dialogue"]]
+[node name="DialogBox" type="PanelContainer" parent="CanvasLayer" unique_id=2097147064 groups=["ui_dialogue"]]
 self_modulate = Color(0.008578247, 0.10088115, 0.99999994, 1)
 anchors_preset = 12
 anchor_top = 1.0
@@ -380,25 +387,25 @@ grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("3_6t5aa")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogBox"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogBox" unique_id=1709068445]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogBox/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialogBox/MarginContainer" unique_id=290455143]
 layout_mode = 2
 
-[node name="Name_label" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer"]
+[node name="Name_label" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer" unique_id=1099899443]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Nome
 "
 
-[node name="Text_label" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer"]
+[node name="Text_label" type="RichTextLabel" parent="CanvasLayer/DialogBox/MarginContainer/VBoxContainer" unique_id=1531488099]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Texto
 "
 
-[node name="AmmoDisplay" type="Label" parent="CanvasLayer"]
+[node name="AmmoDisplay" type="Label" parent="CanvasLayer" unique_id=10682351]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -413,7 +420,7 @@ grow_vertical = 0
 text = "10"
 label_settings = SubResource("LabelSettings_x3wgy")
 
-[node name="Label" type="Label" parent="CanvasLayer"]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=22804427]
 visible = false
 anchors_preset = -1
 anchor_left = 0.5
@@ -428,24 +435,3 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "[E] para interagir"
 label_settings = SubResource("LabelSettings_3smsa")
-
-[node name="Arms" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.029618263, 0.17326498)
-
-[node name="left_arm" type="MeshInstance3D" parent="Arms"]
-transform = Transform3D(0.14999999, 0, 0, 0, 0.06602848, 0.5387428, 0, -0.1346857, 0.26411393, 0.7256004, -0.1729086, -0.2880315)
-mesh = SubResource("BoxMesh_x3wgy")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Arms/left_arm"]
-transform = Transform3D(0.9999997, 0, 0, 0, 0.4999998, -3.4641006, 0, 0.21650629, 0.4999998, 0, 1.4912126, -0.6378125)
-mesh = SubResource("BoxMesh_x3wgy")
-skeleton = NodePath("../..")
-
-[node name="right_arm" type="MeshInstance3D" parent="Arms"]
-transform = Transform3D(0.14999999, 0, 0, 0, 0.06602848, 0.5387428, 0, -0.1346857, 0.26411393, -0.53868484, -0.18770841, -0.2880315)
-mesh = SubResource("BoxMesh_x3wgy")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Arms/right_arm"]
-transform = Transform3D(0.9999997, 0, 0, 0, 0.4999998, -3.4641006, 0, 0.21650629, 0.4999998, 0, 1.4912126, -0.6378125)
-mesh = SubResource("BoxMesh_x3wgy")
-skeleton = NodePath("../..")

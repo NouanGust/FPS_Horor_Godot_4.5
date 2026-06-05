@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bq4uy7wo5i0bl"]
+
+[ext_resource type="Shader" uid="uid://bcdfkqxqxy4t3" path="res://Shadders/overlay.gdshader" id="1_50bgh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_50bgh")
+shader_parameter/pixel_size = 0.0
+shader_parameter/enabled = true

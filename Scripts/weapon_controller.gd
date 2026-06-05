@@ -29,6 +29,6 @@ func shoot(damage_amount: int) -> void:
 
 # --- Feedback visual do flash ---
 func muzzle_flash():
-	muzzle_light.light_energy = 2.0
+	muzzle_light.light_energy = 30.0
 	await get_tree().create_timer(0.1).timeout
 	muzzle_light.light_energy = 0.0

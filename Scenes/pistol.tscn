@@ -1,26 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://co8vphn5qdln"]
+[gd_scene format=3 uid="uid://co8vphn5qdln"]
 
 [ext_resource type="ArrayMesh" uid="uid://cmnmb3bfia07c" path="res://Assets/Models/Pistol.res" id="1_j1qo2"]
 [ext_resource type="Script" uid="uid://3l666cb6sbxc" path="res://Scripts/weapon_controller.gd" id="1_v21tj"]
 [ext_resource type="PackedScene" uid="uid://dqn3bpfrik4g3" path="res://Scenes/bullet.tscn" id="2_ui64p"]
 
-[node name="Pistol" type="Node3D"]
+[node name="Pistol" type="Node3D" unique_id=1982092972]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 script = ExtResource("1_v21tj")
 bullet_scene = ExtResource("2_ui64p")
 
-[node name="Pistol" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44669974, 1.1920929e-07, -1.4230628)
+[node name="Pistol" type="MeshInstance3D" parent="." unique_id=949060326]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, -0.7363243)
 mesh = ExtResource("1_j1qo2")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40192786, -0.031210728, -2.2609477)
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=387225389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14495616, -1.5773243)
 light_color = Color(0.9411765, 0.32941177, 0, 1)
 light_energy = 0.0
-omni_range = 0.15
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1.6666665, 0, 0, 0, 1.6666665, 0, 0, 0, 1.6666665, 0, 0, -0.7799142)
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1874238261]
+transform = Transform3D(1.6666665, 0, 0, 0, 1.6666665, 0, 0, 0, 1.6666665, 0.4234284, 0, -0.13338247)
 
-[node name="MuzzlePoint" type="Marker3D" parent="."]
-transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.43240762, -0.14491697, -2.1853287)
+[node name="MuzzlePoint" type="Marker3D" parent="." unique_id=2143104967]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.00897914, -0.14491695, -1.5387967)

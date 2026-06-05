@@ -1,4 +1,5 @@
 extends CharacterBody3D
+class_name Player
 
 # Move config
 @export_category("Movimento")
@@ -47,7 +48,8 @@ var history_items_seen: Array[String] = []
 # --- Utilitários ---
 var is_frozen: bool = false
 
- 
+#func get_shader() -> Shader:
+	#return camera.
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
